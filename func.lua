@@ -2130,7 +2130,7 @@ print("[ Skidware ]: Added functions to the env.")
 if not shared.notified then 
     game:GetService("StarterGui"):SetCore("SendNotification", {
         Title = "Skidware API Injected",
-        Text = "enjoy",  -- xeno server: discord.gg/getxeno
+        Text = "enjoy",
         Duration = 2,
         Icon = "rbxassetid://1"
     })
