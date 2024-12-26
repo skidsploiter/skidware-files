@@ -1,3 +1,1 @@
-while wait() do
-  print("skidware")
-end
+print("loaded skidware, enjoy! /kz")
