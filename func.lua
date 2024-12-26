@@ -3,9 +3,9 @@ getgenv().IS_Skidware_LOADED = false
 local oldr = request 
 getgenv().request = function(options)
 	if options.Headers then
-		options.Headers["User-Agent"] = "Skidware/RobloxApp/2.1"
+		options.Headers["User-Agent"] = "Skidware/RobloxApp/1.0.2"
 	else
-		options.Headers = {["User-Agent"] = "Skidware/RobloxApp/2.1"}
+		options.Headers = {["User-Agent"] = "Skidware/RobloxApp/1.0.2"}
 	end
 	local response = oldr(options)
 	return response
