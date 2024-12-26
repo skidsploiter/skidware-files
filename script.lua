@@ -1,1 +1,3 @@
-print("wok")
+while wait() do
+  print("skidware")
+end
