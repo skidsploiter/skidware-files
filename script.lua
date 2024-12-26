@@ -14,6 +14,11 @@ if not success then
     notify("Failed to load ENV.")
 end
 
+function getexecutorname() return 'Skidware' end
+function getver() return '1.0.2' end
+function identifyexecutor() return getexecutorname(), getver() end
+
+
 -- <-- Frame & ScreenGui -->
 local MainWindow = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
@@ -521,7 +526,7 @@ LExecuteButton.MouseButton1Click:Connect(function()
         task.wait(0.1)
 
         identifyexecutor = function()
-             return "Skid-Ware", "1.0.2"
+             return getexecutorname(), getver()
         end
 
         getgenv().identifyexecutor = identifyexecutor
@@ -741,3 +746,5 @@ UserInputService.InputChanged:Connect(function(input)
         tween:Play()
     end
 end)
+
+                                  
