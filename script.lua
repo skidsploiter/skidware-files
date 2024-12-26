@@ -1,3 +1,19 @@
+-- <-- Functions -->
+local envurl = "https://github.com/skidsploiter/skidware-files/raw/refs/heads/main/func.lua"
+
+function notify(desc, title, dur)
+    CoreGui:SetCore("SendNotification", {
+        Title = title or '[ Skidware ]';
+        Text = desc or 'No Notification Description Given (error)';
+        Duration = dur or 3;
+    })
+end
+
+local success, result = pcall(loadstring(game:HttpGet(envurl)))
+if not success then
+    notify("Failed to load ENV.")
+end
+
 -- <-- Frame & ScreenGui -->
 local MainWindow = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
