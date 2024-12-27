@@ -13,10 +13,10 @@ local success, result = pcall(loadstring(game:HttpGet(envurl)))
 if not success then
     notify("Failed to load ENV.")
 end
-
+-- function getver() return '1.0.2' end
+-- raz called me a fucktard :(
 function getexecutorname() return 'Skidware' end
-function getver() return '1.0.2' end
-function identifyexecutor() return getexecutorname(), getver() end
+function identifyexecutor() return getexecutorname(), '1.0.2' end -- you happy raz?
 
 
 -- <-- Frame & ScreenGui -->
