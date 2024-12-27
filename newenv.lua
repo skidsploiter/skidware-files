@@ -1,23 +1,7 @@
---[[
-
- ░▒▓███████▓▒░░▒▓██████▓▒░░▒▓█▓▒░       ░▒▓██████▓▒░░▒▓███████▓▒░  
-░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ 
-░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ 
- ░▒▓██████▓▒░░▒▓████████▓▒░▒▓█▓▒░      ░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░ 
-       ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ 
-       ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ 
-░▒▓███████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓███████▓▒░   
+--[[ 
 -- powered by salad - discord.gg/getsalad
 ]]
 -- vars
-
-thefunny = {"I am the Globglogabgalab", "The shwabbledabblewabblegabbleflibbablabbablab", "I'm full of shwibblyliberkind", "I am the yeast of thoughts and minds"}
-
-function printskibidi()
-  for i, v in ipairs(thefunny) do
-    print("[ Skid-Ware ] " .. v)
-  end
-end
 
 getgenv().IS_Skid-Ware_LOADED = false
 getgenv().shared = shared 
@@ -549,6 +533,14 @@ getgenv().require = function(scr) -- not mine
 		end
 		return
 	end
+end
+
+thefunny = {"I am the Globglogabgalab", "The shwabbledabblewabblegabbleflibbablabbablab", "I'm full of shwibblyliberkind", "I am the yeast of thoughts and minds"}
+
+function printskibidi()
+  for i, v in ipairs(thefunny) do
+    print("[ Skid-Ware ] " .. v)
+  end
 end
 
 getgenv().cloneref = function(ref)
