@@ -39,8 +39,8 @@ local RobloxTestService = cloneref(game:FindService("TestService"))
 
 local SkidWare = {
     about = {
-        Name = "Skid-Ware"
-        Version = "v1.0.2"
+        Name = "Skid-Ware",
+        Version = "v1.0.2",
         Authors = "kz, knownissue, RazAPI"
     }
 }
