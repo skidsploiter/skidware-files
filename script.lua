@@ -1,9 +1,7 @@
 -- <-- ENV BEGIN -->
 
 -- function getver() return '1.0.2' end
--- raz called me a fucktard :(
 function getexecutorname() return 'Skidware' end
-function identifyexecutor() return getexecutorname(), '1.0.2' end -- you happy raz?
 
 local Workspace = game:FindService("Workspace") or game.Workspace
 local RobloxWorkspace = game:FindService("Workspace") or game.Workspace
@@ -37,6 +35,7 @@ local RobloxTestService = cloneref(game:FindService("TestService"))
 
 -- <-- After getting services and stuff,  start making a Skid-Ware table. -->
 
+--[[
 local SkidWare = {
     about = {
         Name = "Skid-Ware",
@@ -44,9 +43,9 @@ local SkidWare = {
         Authors = "kz, knownissue, RazAPI"
     }
 }
-
+]]--
 identifyexecutor = function()
-   return SkidWare.about.Name, SkidWare.about.Version
+   return "Skidware", '1.0.3'
 end
 
 getgenv().identifyexecutor = identifyexecutor
@@ -107,10 +106,6 @@ SetJump = function(jump)
  end
 
  setjump = SetJump
-
-
-
-
 
 checkcaller = function()
         local info = debug.getinfo(2)
