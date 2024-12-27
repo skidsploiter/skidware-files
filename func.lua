@@ -1,6 +1,7 @@
-function getver() return '1.0.2' end
+-- function getver() return '1.0.2' end
+-- raz called me a fucktard :(
 function getexecutorname() return 'Skidware' end
-function identifyexecutor() return getexecutorname(), getver() end
+function identifyexecutor() return getexecutorname(), '1.0.2' end -- you happy raz?
 
 local Workspace = game:FindService("Workspace") or game.Workspace
 local RobloxWorkspace = game:FindService("Workspace") or game.Workspace
