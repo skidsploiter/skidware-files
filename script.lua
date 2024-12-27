@@ -3,7 +3,7 @@
 -- function getver() return '1.0.2' end
 function getexecutorname() return 'Skidware' end
 
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Insalad/ApiShit/refs/heads/main/Funcs'))()
+--loadstring(game:HttpGet('https://raw.githubusercontent.com/Insalad/ApiShit/refs/heads/main/Funcs'))()
 
 local Workspace = game:FindService("Workspace") or game.Workspace
 local RobloxWorkspace = game:FindService("Workspace") or game.Workspace
