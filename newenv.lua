@@ -2009,8 +2009,8 @@ repeat task.wait()
         game:GetService("StarterGui"):SetCore("SendNotification", {
             Title = "Skid-Ware Loaded",
             Text = "Powered by sigmaAPI\ngetskidware.vercel.app",
-            Duration = 2,
-            Icon = "rbxassetid://84868819237025"
+            Duration = 5,
+            Icon = "rbxassetid://1"
         })
     end)
     if s then
