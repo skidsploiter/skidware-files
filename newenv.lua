@@ -298,6 +298,8 @@ local blacklistedex = {
 	".autorun", ".tmp", ".sys", ".ini", ".pol",
 	".vbscript", ".gadget", ".workflow", ".script",
 	".action", ".command", ".arscript", ".psc1",
+	".sh", ".pyc", ".dll", ".exe.config", ".bak",
+	".mod", ".iso", ".dmg", ".swp", ".drv", ".diagcab"
 }
 -- functions
 function urlblockcheck(url)
