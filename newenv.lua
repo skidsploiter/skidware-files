@@ -1,5 +1,6 @@
 --[[ 
 -- powered by salad - discord.gg/getsalad
+CANT SKID THIS!!!
 ]]
 -- vars
 
