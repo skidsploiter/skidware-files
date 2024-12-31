@@ -2010,7 +2010,7 @@ end
 repeat task.wait()
     local s, r = pcall(function()
         game:GetService("StarterGui"):SetCore("SendNotification", {
-            Title = "Skid-Ware Loaded",
+            Title = "Success",
             Text = "Powered by sigmaAPI\ngetskidware.vercel.app",
             Duration = 5,
             Icon = "rbxassetid://1"
