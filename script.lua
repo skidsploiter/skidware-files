@@ -1387,9 +1387,9 @@ UserInputService.InputChanged:Connect(function(input)
 end)
 function sendnotif(title, description, duration)
 	game:GetService("StarterGui"):SetCore("SendNotification",{
-		Title = title, -- Required
-		Text = description, -- Required
-		Icon = "rbxassetid://1" -- Optional
+		Title = title, -- e
+		Text = description, -- e
+		Icon = "rbxassetid://139438982368214" -- skidware logo
 	})
 end
                                   
