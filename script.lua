@@ -10,9 +10,13 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
 
 -- function getver() return '1.0.2' end
 function getexecutorname() return 'Skidware' end
+function getthreadcontext() return 3 end -- +1 unc 🤑🤑🤑
 
 --loadstring(game:HttpGet('https://raw.githubusercontent.com/Insalad/ApiShit/refs/heads/main/Funcs'))()
 --loadstring(game:HttpGet("https://raw.githubusercontent.com/skidsploiter/skidware-files/refs/heads/main/newenv.lua"))()
+
+task.wait(4) -- wait for init
+loadstring(game:HttpGet("https://github.com/skidsploiter/skidware-files/raw/refs/heads/main/newenv.lua"))()
 
 local Workspace = game:FindService("Workspace") or game.Workspace
 local RobloxWorkspace = game:FindService("Workspace") or game.Workspace
