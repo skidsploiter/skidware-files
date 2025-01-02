@@ -1,5 +1,13 @@
 -- <-- ENV BEGIN -->
 
+local players = game:GetService("Players")
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Loaded!";
+    Text = "Welcome, " .. players.LocalPlayer.DisplayName .. "! Injected with sigmaAPI!";
+    Icon = "rbxthumb://type=AvatarHeadShot&id=" .. players.LocalPlayer.UserId .. "&w=180&h=180 true";
+    Duration = 5
+})
+
 -- function getver() return '1.0.2' end
 function getexecutorname() return 'Skidware' end
 
