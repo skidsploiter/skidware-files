@@ -48,7 +48,7 @@ local SkidWare = {
 }
 ]]--
 identifyexecutor = function()
-   return "Skidware", '1.0.3'
+   return "Skidware", '1.0.2'
 end
 
 getgenv().identifyexecutor = identifyexecutor
@@ -650,13 +650,7 @@ end)
 -- <-- ENV END -->
 -- <-- Utility funcs -->
 
-function notify(desc, title, dur)
-    CoreGui:SetCore("SendNotification", {
-        Title = title or '[ Skidware ]';
-        Text = desc or 'No Notification Description Given (error)';
-        Duration = dur or 3;
-    })
-end
+
 
 -- function getver() return '1.0.2' end
 -- raz called me a fucktard :(
@@ -1391,19 +1385,12 @@ UserInputService.InputChanged:Connect(function(input)
         tween:Play()
     end
 end)
-
+function sendnotif(title, description, duration)
+	game:GetService("StarterGui"):SetCore("SendNotification",{
+		Title = title, -- Required
+		Text = description, -- Required
+		Icon = "rbxassetid://1" -- Optional
+	})
+end
                                   
-notify("Loaded.")
-notify("Loaded.")
-notify("Loaded.")
-notify("Loaded.")
-notify("Loaded.")
-notify("Loaded.")
-notify("Loaded.")
-notify("Loaded.")
-notify("Loaded.")
-notify("Loaded.")
-notify("Loaded.")
-notify("Loaded.")
-notify("Loaded.")
-notify("Loaded.")
+sendnotif("[ Skidware ]", "Loaded UI successfully!", 5)
