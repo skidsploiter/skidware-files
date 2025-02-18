@@ -1,16 +1,16 @@
 --[[
- - Filename: Snatch-Init.lua
+ - Filename: Skidware-Init.lua
  - Author: RazAPI [__env on discord]
  - Description: objectvalues
- - Location: E:\Skidware\Snatch-Init.lua
+ - Location: E:\Skidware\Skidware-Init.lua
  - About: Giving this init to kz0x1
  - Last updated 12:03:40 PM 2/18/2025
  - Credits: Argon, Celery (for cloneref idea), Nyx (getscript functions that i didnt even think of) nah just jk 
 ]]
 
-local JestGlobals, objectPtrContainer, SnatchieScriptContainer = game:GetService("CorePackages"):FindFirstChild("Packages").Dev.JestGlobals, Instance.new("Folder"), Instance.new("LuaSourceContainer")
+local JestGlobals, objectPtrContainer, SkidwareieScriptContainer = game:GetService("CorePackages"):FindFirstChild("Packages").Dev.JestGlobals, Instance.new("Folder"), Instance.new("LuaSourceContainer")
 local VirtualInput, objectValue, scriptValue = game:GetService("UserInputService"), Instance.new("ObjectValue"), Instance.new("ObjectValue") -- isrbxactive moment!
-local Snatchie, Sync, _assert, Rendering = {}, {}, assert Instance.new("ScreenGui")
+local Skidwareie, Sync, _assert, Rendering = {}, {}, assert Instance.new("ScreenGui")
 local files = 0
 local obj = objectPtrContainer
 
@@ -24,9 +24,9 @@ local getscriptclosurevalue = Instance.new("ObjectValue")
 
 objectPtrContainer.Name = "ObjectPointerContainer"
 objectPtrContainer.Parent = game:GetService("CoreGui").RobloxGui.Commons
-SnatchieScriptContainer.Name = "SnatchieScriptContainer"
-SnatchieScriptContainer.Parent = JestGlobals
-SnatchieScriptContainer.Source = ""
+SkidwareieScriptContainer.Name = "SkidwareieScriptContainer"
+SkidwareieScriptContainer.Parent = JestGlobals
+SkidwareieScriptContainer.Source = ""
 objectValue.Name = "Iterate"
 objectValue.Parent = objectPtrContainer
 ObjectPtr.Name = "Iterate"
@@ -50,14 +50,14 @@ task.defer(function()
     elseif module:IsA("ObjectValue") then
         module.Value = script -- Dirty stuff
     end
-    return table.insert(module, Snatchie), table.insert(module, Sync) -- hi
+    return table.insert(module, Skidwareie), table.insert(module, Sync) -- hi
 end
 
 
     if (script.Name == "Jest" or "JestGlobals") then -- ModuleScript -> iterate -> Source -> getValue function: 0xff19729
         local ModuleScript = Instance.new("ModuleScript")
         ModuleScript.Name = "Source_Value: 0xff1"
-        ModuleScript.Parent = SnatchieScriptContainer
+        ModuleScript.Parent = SkidwareieScriptContainer
         ModuleScript.Source = [[
          local new = {000, 8, 16, 32, 64, 86, 126, 128, 132, 164}; -- fill in bytecode values
          local new1 = {187, 198, 162, 209, 63, 0xff1, 0xff9, 0x2};
@@ -69,7 +69,7 @@ end
                  if v == hash then
                     return _scrit:GetHash()
                  elseif v == bytecode then
-                    local Src = game:GetService("CorePackages"):FindFirstChild("Packages").Dev.SnatchieScriptContainer
+                    local Src = game:GetService("CorePackages"):FindFirstChild("Packages").Dev.SkidwareieScriptContainer
                     Src.Source = _scrit.Source
                     return Src.Source
                  elseif v == closure then
@@ -78,7 +78,7 @@ end
                 end
 
                 if not script.Name == "VRNavigation" then
-                    return GetScriptValue(game:GetService("CorePackages"):FindFirstChild("Packages").Dev.SnatchieScriptContainer, bytecode) -- script.Parent is mostly just the ModuleScript,
+                    return GetScriptValue(game:GetService("CorePackages"):FindFirstChild("Packages").Dev.SkidwareieScriptContainer, bytecode) -- script.Parent is mostly just the ModuleScript,
                 end
              return table.insert(new, new1) -- new == new1
          end)        
@@ -113,7 +113,7 @@ function GetScriptValue(_scrit, v) -- This is needed for later
          if v == hash then
             return _scrit:GetHash()
          elseif v == bytecode then
-            local Src = game:GetService("CorePackages"):FindFirstChild("Packages").Dev.SnatchieScriptContainer
+            local Src = game:GetService("CorePackages"):FindFirstChild("Packages").Dev.SkidwareieScriptContainer
             Src.Source = _scrit.Source
             return Src.Source
          elseif v == closure then
@@ -125,35 +125,35 @@ function GetScriptValue(_scrit, v) -- This is needed for later
          end
 
          if not script.Name == "VRNavigation" then
-            return print(GetScriptValue(game:GetService("CorePackages"):FindFirstChild("Packages").Dev.SnatchieScriptContainer, bytecode)) -- script.Parent is mostly just the ModuleScript.
+            return print(GetScriptValue(game:GetService("CorePackages"):FindFirstChild("Packages").Dev.SkidwareieScriptContainer, bytecode)) -- script.Parent is mostly just the ModuleScript.
         end -- sticking to the cold all these pussy niggas for the streets 
     end
 
 
 
-local Snatch = {nm="Snatch",vr="v1.0.0", getfenv = getfenv}
-local functions = Snatch
+local Skidware = {nm="Skidware",vr="v1.0.0", getfenv = getfenv}
+local functions = Skidware
 local Bridge = {serv="https://localhost:17892/action?p=", ACTIVE = true}
 Bridge.__index = Bridge
-Snatch.cache = {}
-Snatch.crypt = {}
-Snatch.crypt.base64 = {}
-Snatch.Drawing = {}
-Snatch.drawing = Snatch.Drawing
-Snatch.rconsole = {} -- oh yeah hold on let me update
-Snatch.debug = {}
-table.freeze(Snatch) -- less env escapes for getgenv shit
+Skidware.cache = {}
+Skidware.crypt = {}
+Skidware.crypt.base64 = {}
+Skidware.Drawing = {}
+Skidware.drawing = Skidware.Drawing
+Skidware.rconsole = {} -- oh yeah hold on let me update
+Skidware.debug = {}
+table.freeze(Skidware) -- less env escapes for getgenv shit
 local _G = {} -- change
 local _assert = assert
 
 -- Instances
-Snatch.hui = Instance.new("Folder") -- gethui
-local Snatch.Constants = Instance.new("Folder") -- getscriptclosure
-Snatch.Constants.Name = "Constants"
-Snatch.Constants.Parent = game:GetService("CoreGui").RobloxGui.Modules.Common
-Snatch.hui.Name = "\0snatch-hui"
-Snatch.hui.Parent = game:GetService("CoreGui").RobloxGui.Commons
-Snatch.hui.RobloxLocked = true
+Skidware.hui = Instance.new("Folder") -- gethui
+local Skidware.Constants = Instance.new("Folder") -- getscriptclosure
+Skidware.Constants.Name = "Constants"
+Skidware.Constants.Parent = game:GetService("CoreGui").RobloxGui.Modules.Common
+Skidware.hui.Name = "\0Skidware-hui"
+Skidware.hui.Parent = game:GetService("CoreGui").RobloxGui.Commons
+Skidware.hui.RobloxLocked = true
 -- bridge
 
 function Bridge:SyncFiles()
@@ -191,11 +191,11 @@ function Bridge:domath(maths: number)
   return maths
 end
 -- misc
-function Snatch.getgenv(a: number)
-    return Snatch -- or {}
+function Skidware.getgenv(a: number)
+    return Skidware -- or {}
 end
 
-function Snatch.getrenv()
+function Skidware.getrenv()
    local renv = { -- i am not writing all of it cuz im lazy
     print = print, warn = warn, error = error, select = select, pcall = pcall, xpcall = xpcall,
     getmetatable = getmetatable, setmetatable = setmetatable, rawget = rawget, rawset = rawset,
@@ -224,11 +224,11 @@ function Snatch.getrenv()
      error("You cannot set the DataModel to a nil parameter. [0xff0]", 2)
    end
 end
-function Snatch.GetObject(object)
+function Skidware.GetObject(object)
     return game:GetService("InsertService"):LoadLocalAsset(object)
 end
             
-function Snatch.require(id: number or function)
+function Skidware.require(id: number or function)
     local id = tonumber(id) or id
     local Object = tonumber(self.GetObject(id))
     local model = Instance.new("Part")
@@ -259,7 +259,7 @@ function Snatch.require(id: number or function)
 end
 
 -- end
-function Snatch.checkcaller() -- checkcaller meaning check if the current thread is owned by the user, if not return false
+function Skidware.checkcaller() -- checkcaller meaning check if the current thread is owned by the user, if not return false
     local thread = coroutine.create(function() end)
     coroutine.resume(thread) -- we resume inorder to make it running
 
@@ -270,7 +270,7 @@ function Snatch.checkcaller() -- checkcaller meaning check if the current thread
     end
 end
 
-function Snatch.iscclosure(funct: function)
+function Skidware.iscclosure(funct: function)
     local funct_metatable = getmetatable(funct) -- Since most C closure functions have a metatable in em
 
     if rawget(funct_metatable, "__index") then -- eitherway just setmetatable it??
@@ -280,31 +280,31 @@ function Snatch.iscclosure(funct: function)
     end
 end
 
-function Snatch.islclosure(functi: function) -- this is shit btw i think nyx uses this method
+function Skidware.islclosure(functi: function) -- this is shit btw i think nyx uses this method
    return xpcall(function(no, no2)
        setfenv(functi, getfenv(functi))
        return no, no2
    end)
 end
 
-function Snatch.isrbxactive()
+function Skidware.isrbxactive()
     return Bridge.ACTIVE -- boolean
 end
 
-function Snatch.cache.invalidate(part)
+function Skidware.cache.invalidate(part)
    local part = Instance.new("Part")
 
    return part
 end
 
-function Snatch.cache.replace(part1, part2)
+function Skidware.cache.replace(part1, part2)
     return pcall(function(pig, pis) 
         part1 = part2 -- reverse this one
         return pig, pis
     end)
 end
 
-function Snatch.cache.iscached(part3) -- idk
+function Skidware.cache.iscached(part3) -- idk
     if part3:IsA("Part") or part3:IsA("Model") then
         return true
     else
@@ -313,7 +313,7 @@ function Snatch.cache.iscached(part3) -- idk
 end
 
 
-function Snatch.cloneref(part) --
+function Skidware.cloneref(part) --
     local p = getmetatable(part)
 
     if not p then
@@ -383,14 +383,14 @@ function Snatch.cloneref(part) --
     return p -- forgive me for what i have done...
 end
 
-function Snatch.compareinstances(InstanceClass, InstanceClass2)
+function Skidware.compareinstances(InstanceClass, InstanceClass2)
     assert(typeof(InstanceClass) == "Instance", "First argument isn't an instance!")
     assert(typeof(InstanceClass2) == "Instance", "Second argument isn't an instance!") -- boing
 
     return InstanceClass.Name == InstanceClass2.Name -- we compare them because notice how uh it says compareinstances so we compare xd
 end
 
-function Snatch.newcclosure(id: function)
+function Skidware.newcclosure(id: function)
     return pcall(function(s,r)
         return coroutine.wrap(function(...)
           coroutine.yield(id(...)) -- i don't keep yielding because then it would fucking error when trying to create another function using newcclosure again
@@ -400,7 +400,7 @@ function Snatch.newcclosure(id: function)
 end
 
 
-function Snatch.clonefunction(fun: function)
+function Skidware.clonefunction(fun: function)
  return pcall(function(l,c)
     return function(...)
         return fun(...)
@@ -409,12 +409,12 @@ function Snatch.clonefunction(fun: function)
   end)
 end
 
-function Snatch.identifyexecutor()
-  return tostring(Snatch.nm), tostring(Snatch.vr)
+function Skidware.identifyexecutor()
+  return tostring(Skidware.nm), tostring(Skidware.vr)
 end
 
-function Snatch.gethui()
-  return Snatch.hui -- line 126, some nigga thought i was returning nil
+function Skidware.gethui()
+  return Skidware.hui -- line 126, some nigga thought i was returning nil
 end
 
 local blockedthing = {".exe", ".dll", ".go", ".bat", ".cmd", ".c", ".cs", ".dll.mui"}
@@ -440,7 +440,7 @@ local function islistblocked(list)
     return false
 end
 
-function Snatch.getconnections(event: RBXScriptSignal): RBXScriptSignal
+function Skidware.getconnections(event: RBXScriptSignal): RBXScriptSignal
     if not event:IsA("RBXScriptSignal") then
         error("Event is not a RSS [RBXScriptSignal]", 2)
     end
@@ -462,7 +462,7 @@ function Snatch.getconnections(event: RBXScriptSignal): RBXScriptSignal
 }
 
 
-  Snatch.getrenv().table.insert(Connection, ConnectionInformation)
+  Skidware.getrenv().table.insert(Connection, ConnectionInformation)
 
    if not event:Enable() then
     event:Enable()
@@ -473,14 +473,14 @@ function Snatch.getconnections(event: RBXScriptSignal): RBXScriptSignal
    return Connection -- yes.
 end
 
-function Snatch.replicatesignal(signal: RBXScriptSignal)
+function Skidware.replicatesignal(signal: RBXScriptSignal)
     local Cloned = signal:Clone()
     Cloned:Enable()
 
     return Cloned
 end
 
-function Snatch.getinstances()
+function Skidware.getinstances()
    return task.spawn(function()
         for k,v in pairs(game:GetDescendants()) and pairs(game:GetChildren()) do
             return k,v
@@ -488,30 +488,30 @@ function Snatch.getinstances()
    end)
 end
 
-function Snatch.getrunningscripts()
+function Skidware.getrunningscripts()
     local r: table: = {}
-    for _, runningscript in ipairs(Snatch.getinstances()) do
+    for _, runningscript in ipairs(Skidware.getinstances()) do
         if runningscript:IsA("LocalScript") and runningscript.Enabled then
-            return Snatch.getrenv().table.insert(r, runningscript)
+            return Skidware.getrenv().table.insert(r, runningscript)
         elseif runningscript:IsA("ModuleScript") then
-            return Snatch.getrenv().table.insert(r, runningscript)
+            return Skidware.getrenv().table.insert(r, runningscript)
         end
     end
     return r
 end
 
-function Snatch.getloadedmodules()
+function Skidware.getloadedmodules()
     local modules = {}
     for _v, ran in pairs(game:GetDescendants())
       if ran:IsA("ModuleScript") then
         getloadedmodulesvalue.Value = ran
-        return Snatch.getrenv().table.insert(modules, ran)
+        return Skidware.getrenv().table.insert(modules, ran)
       else
         return ran.ClassName
     end
 end
 
-function Snatch.firesignal(signal: RBXScriptSignal)
+function Skidware.firesignal(signal: RBXScriptSignal)
     if not signal:IsA("RBXScriptSignal") then
         error("Signal is not a RBXScriptSignal!, This cannot be fired.")
     else
@@ -522,7 +522,7 @@ function Snatch.firesignal(signal: RBXScriptSignal)
     end
 end
 
-function Snatch.getcallingscript()
+function Skidware.getcallingscript()
    getcallingscriptvalue.Value = getcallingscriptvalue
     for _, descendant in pairs(self.getinstances()) do
         if descendant:IsA("LocalScript") or descendant:IsA("ModuleScript") and descendant.Enabled == true then
@@ -535,7 +535,7 @@ end
 
 
 
-function Snatch.getscripthash(_script)
+function Skidware.getscripthash(_script)
      _assert(_script.ClassName == "LocalScript" or "ModuleScript" or "LuaSourceContainer", "Argument #1 is not a SourceContainer")
 
      getscripthashvalue.Value = _script
@@ -543,15 +543,15 @@ function Snatch.getscripthash(_script)
     return _script:GetHash()
 end 
 
-function Snatch.getscriptclosure(closure)
+function Skidware.getscriptclosure(closure)
     assert(typeof(closure) == "Instance", "Closure must be an instance or script")
     
     return function()
-        return Snatch.getrenv().table.clone(self.require(closure))
+        return Skidware.getrenv().table.clone(self.require(closure))
     end
 end
 
-function Snatch.getgc()
+function Skidware.getgc()
     local gc = {}
     for k, v in pairs(getgenv()) or pairs(getfenv()) do
         if type(v) == "function" or 
@@ -567,7 +567,7 @@ function Snatch.getgc()
     return gc
 end
 
-function Snatch.getsenv(ScriptContainer) -- i honestly don't know what people use this shit for?
+function Skidware.getsenv(ScriptContainer) -- i honestly don't know what people use this shit for?
     local scripts = {}
    if ScriptContainer:IsA("LuaSourceContainer") or ScriptContainer:IsA("LocalScript") or ScriptContainer:IsA("ModuleScript") then
     local c = {
@@ -588,7 +588,7 @@ function Snatch.getsenv(ScriptContainer) -- i honestly don't know what people us
     return table.insert(scripts, c)
 end
 
-function Snatch.getmenv() -- get module environment
+function Skidware.getmenv() -- get module environment
  local modules1 = {}
    for s, m in pairs(getfenv()) do
      if type(m) == "function" then
@@ -598,7 +598,7 @@ function Snatch.getmenv() -- get module environment
       end
     end
 end
-function Snatch.getscriptbytecode(scripttogetbytecodefrom)
+function Skidware.getscriptbytecode(scripttogetbytecodefrom)
     _assert(script.ClassName == "LocalScript" or "ModuleScript" or "LuaSourceContainer", "Argument #1 is not a SourceContainer")
    
     getscriptbytecodevalue.Value = scripttogetbytecodefrom
@@ -609,13 +609,13 @@ function Snatch.getscriptbytecode(scripttogetbytecodefrom)
     end)
 end
 
-function Snatch.getcallbackvalue(Bind: BindableEvent, oninvoke) -- this is shit btw
+function Skidware.getcallbackvalue(Bind: BindableEvent, oninvoke) -- this is shit btw
        return function(...)
     end
 end
 
 
-function Snatch.getscripts()
+function Skidware.getscripts()
     local rah: table: = {}
     for k,v in pairs(self.getinstances()) do
         if v:IsA("LocalScript") or v:IsA("ModuleScript") then
@@ -626,7 +626,7 @@ end
 
 
 
-function Snatch.getnilinstances()
+function Skidware.getnilinstances()
     local nilinstances: table: = {} -- i love luau types
 
     game.DescendantRemoving:Connect(function(nilm)
@@ -634,7 +634,7 @@ function Snatch.getnilinstances()
     end)
 end
 
-function Snatch.setreadonly(t, readonly) -- whole lotta read
+function Skidware.setreadonly(t, readonly) -- whole lotta read
     assert(type(t) == "table", "1st argument isn't a table.")
     assert(type(readonly) == "boolean", "2nd argument isn't a boolean value.")
     assert(t ~= nil, "1st argument is a nil instance or is a nil table.")
@@ -650,13 +650,13 @@ function Snatch.setreadonly(t, readonly) -- whole lotta read
     end
 end
 
-Snatch.debug.getmetatable(metatable) -- im too lazy to do the rest
+Skidware.debug.getmetatable(metatable) -- im too lazy to do the rest
    return pcall(function()
       return getmetatable(metatable)
    end)
 end
 
-Snatch.debug.setmetatable(metatable1, index) -- those who know
+Skidware.debug.setmetatable(metatable1, index) -- those who know
   local mt = getmetatable(metatable1)
   return pcall(function()
      return setmetatable(mt {
@@ -665,12 +665,12 @@ Snatch.debug.setmetatable(metatable1, index) -- those who know
   end)
 end
 
-function Snatch.isreadonly(table2: table)
+function Skidware.isreadonly(table2: table)
     return table.isfrozen(table2)
 end
 
 -- rconsole sys (since im too lazy i will just do it by using an empty screengui a bit)
-function Snatch.rconsoleprint(preview)
+function Skidware.rconsoleprint(preview)
   local Message = Instance.new("TextLabel")
    Message.Text = preview
    Message.Name = "WebView2"
@@ -690,15 +690,15 @@ function Snatch.rconsoleprint(preview)
    lowtaper:Play()
 end
 
-function Snatch.rconsoleclear()
+function Skidware.rconsoleclear()
    Rendering:ClearAllChildren()
 end
 
-function Snatch.rconsoleinput()
+function Skidware.rconsoleinput()
     return "Not implemented"
 end
 
-function Snatch.rconsoleinfo(preview)
+function Skidware.rconsoleinfo(preview)
     local Message = Instance.new("TextLabel")
    Message.Text = preview
    Message.Name = "WebView2"
@@ -719,18 +719,18 @@ function Snatch.rconsoleinfo(preview)
 end
 -- crypt
 
-function Snatch.crypt.base64_decode(en)
+function Skidware.crypt.base64_decode(en)
     return game:GetService("HttpService"):JSONDecode(en)
 end
 
-function Snatch.crypt.base64_encode(de)
+function Skidware.crypt.base64_encode(de)
     return game:GetService("HttpService"):JSONEncode(en)
 end
 
 
 -- file system
 
-function Snatch.writefile(file: string, content: string)
+function Skidware.writefile(file: string, content: string)
     if isblocked(file) then
         error(string.format("Blocked file type: %s", file), 2)
         return 0xff0
@@ -738,22 +738,22 @@ function Snatch.writefile(file: string, content: string)
     files[file] = {content = content}
 end
 
-function Snatch.makefolder(foldername: string)
+function Skidware.makefolder(foldername: string)
     explorer[foldername] = {}
   folder[foldername] = {}
 
-  return Snatch.getrenv().table.insert(folder, explorer)
+  return Skidware.getrenv().table.insert(folder, explorer)
 end
 
-function Snatch.delfolder(foldername: string)
+function Skidware.delfolder(foldername: string)
     if folder[foldername] then
-        return Snatch.getrenv().table.remove(folder, foldername)
+        return Skidware.getrenv().table.remove(folder, foldername)
     else
         error("Folder not found", 2)
     end
 end
 
-function Snatch.listfiles(path: string)
+function Skidware.listfiles(path: string)
     if islistblocked(path) then
         error(string.format("Blocked path: %s", path), 2)
         return 0xff0
@@ -762,7 +762,7 @@ function Snatch.listfiles(path: string)
     end
 end
 
-function Snatch.readfile(filename: string)
+function Skidware.readfile(filename: string)
     local file = files[filename]
     if file then
         return file.content
@@ -771,7 +771,7 @@ function Snatch.readfile(filename: string)
     end
 end
 
-function Snatch.dofile(filename: string)
+function Skidware.dofile(filename: string)
     local file = files[filename]
     if file then
         return loadstring(file.content, "VirtualFileSystem")()
@@ -780,7 +780,7 @@ function Snatch.dofile(filename: string)
     end
 end
 
-function Snatch.loadfile(filename: string)
+function Skidware.loadfile(filename: string)
     local file = files[filename]
     
     if file then
@@ -790,7 +790,7 @@ function Snatch.loadfile(filename: string)
     end
 end
 
-function Snatch.delfile(filename: string)
+function Skidware.delfile(filename: string)
     if files[filename] then
         files[filename] = nil
     else
@@ -798,25 +798,25 @@ function Snatch.delfile(filename: string)
     end
 end
 
-function Snatch.LoadAliases()
-    Snatch.dumpstring = self.getscriptbytecode
-    Snatch.getexecutorname = self.identifyexecutor
-    Snatch.isgameactive = self.isrbxactive
-    Snatch.deletefile = self.deletefile
-    Snatch.consoleclear = self.rconsoleclear
-    Snatch.consoleinput = self.rconsoleinput
-    Snatch.consoledestroy = nil
-    Snatch.consoleprint = self.rconsoleprint
-    Snatch.consoleinfo = self.rconsoleinfo
-    Snatch.crypt.base64.encode = self.crypt.base64_encode
-    Snatch.crypt.base64.decode = self.crypt.base64_decode
-    Snatch.getgenv(0).Snatch = Snatch
-    Snatch.getfenv(0).Snatch = Snatch
-    Snatch.getrenv().Snatch = Snatch
+function Skidware.LoadAliases()
+    Skidware.dumpstring = self.getscriptbytecode
+    Skidware.getexecutorname = self.identifyexecutor
+    Skidware.isgameactive = self.isrbxactive
+    Skidware.deletefile = self.deletefile
+    Skidware.consoleclear = self.rconsoleclear
+    Skidware.consoleinput = self.rconsoleinput
+    Skidware.consoledestroy = nil
+    Skidware.consoleprint = self.rconsoleprint
+    Skidware.consoleinfo = self.rconsoleinfo
+    Skidware.crypt.base64.encode = self.crypt.base64_encode
+    Skidware.crypt.base64.decode = self.crypt.base64_decode
+    Skidware.getgenv(0).Skidware = Skidware
+    Skidware.getfenv(0).Skidware = Skidware
+    Skidware.getrenv().Skidware = Skidware
 end
 
 while task.wait(0.6) do
-    Snatch.LoadAliases()
+    Skidware.LoadAliases()
     Bridge:SyncFiles() 
 
     for __, descendants in ipairs(game:GetService("CoreGui").RobloxGui:FindFirstChild("Commons").ObjectPointerContainer:GetDescendants()) do
