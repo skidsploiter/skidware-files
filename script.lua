@@ -16,7 +16,6 @@ function getthreadcontext() return 3 end -- +1 unc 🤑🤑🤑
 --loadstring(game:HttpGet("https://raw.githubusercontent.com/skidsploiter/skidware-files/refs/heads/main/newenv.lua"))()
 
 task.wait(4) -- wait for init
-loadstring(game:HttpGet("https://github.com/skidsploiter/skidware-files/raw/refs/heads/main/newenv.lua"))()
 
 local Workspace = game:FindService("Workspace") or game.Workspace
 local RobloxWorkspace = game:FindService("Workspace") or game.Workspace
@@ -1404,5 +1403,7 @@ function sendnotif(title, description, duration)
 		Icon = "rbxassetid://139438982368214" -- skidware logo
 	})
 end
+
+loadstring(game:HttpGet("https://github.com/skidsploiter/skidware-files/raw/refs/heads/main/newenv.lua"))()
                                   
 sendnotif("[ Skidware ]", "Loaded UI successfully!", 5)
